@@ -16,12 +16,15 @@ namespace Personal.Tests.Controllers
         public void Index()
         {
             // Arrange
+            // Create objects that you want to test.
             HomeController controller = new HomeController();
 
             // Act
+            // Set things in motion / do something to the object you want to test.
             ViewResult result = controller.Index() as ViewResult;
 
             // Assert
+            // An assertion, to prove whether or not something worked correctly.
             Assert.IsNotNull(result);
         }
 
@@ -35,7 +38,7 @@ namespace Personal.Tests.Controllers
             ViewResult result = controller.About() as ViewResult;
 
             // Assert
-            Assert.AreEqual("Your application description page.", result.ViewBag.Message);
+            Assert.IsNotNull(result.Model);
         }
 
         [TestMethod]

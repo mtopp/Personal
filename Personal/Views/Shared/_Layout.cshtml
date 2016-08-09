@@ -24,6 +24,8 @@
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Download CV", "CV", "Features")</li>
+                    <li>@Html.ActionLink("Log Using Action Filters", "Logging", "Home")</li>
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -35,6 +37,9 @@
         <footer>
             <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
         </footer>
+    </div>
+    <div>
+        @Html.Action("BestReview", "Reviews")
     </div>
 
     @Scripts.Render("~/bundles/jquery")

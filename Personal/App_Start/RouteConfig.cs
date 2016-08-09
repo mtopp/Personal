@@ -13,6 +13,11 @@ namespace Personal
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            // New route to print a word
+            //                                                            Anonymously typed object
+            routes.MapRoute(name: "Print", url: "print/{word}", defaults: new { Controller = "Features", Action = "Print", word = "Default" });
+   
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
